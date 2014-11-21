@@ -1,0 +1,35 @@
+
+<div class="paginacao"></div>
+
+<div id="conteudo">
+
+
+      <div id="linha" class="linha clearfix">
+        <div><h2><%= @shot['title'] %></h2></div>
+        <div class="linha_divisoria"></div>
+
+        <span class="image">
+           <%= image_tag("#{@shot['image_url']}", :style=>"width: 300px;",:title => "#{@shot['title']}") %>
+        </span>
+
+              
+        <div class="texto_int">
+
+          <div class="autor">
+            <%= image_tag("#{@autor['avatar_url']}", :style=>"width: 50px;",:title => "Autor: #{@autor['name']}") %> <%= @autor['name'] %>
+          </div>
+
+          <%= render :inline => "#{@shot['description']}"%>
+          
+        </div>
+
+      </div>
+
+
+</div>
+
+<div class="traco"></div>
+
+<div class="direcionais">
+  <a href="javascript: history.go(-1);" title="Voltar à Lista de Shots"> <%=(image_tag("seta.png", :style=>"width: 16px; heigth:16px; vertical-align:middle;") + ' Voltar') %></a>
+</div>

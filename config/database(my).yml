@@ -1,0 +1,37 @@
+# MySQL.  Versions 4.1 and 5.0 are recommended.
+#
+#
+# Be sure to use new-style password hashing:
+#   http://dev.mysql.com/doc/refman/5.0/en/old-client.html
+development:
+  adapter: mysql
+  host: 192.168.0.112
+  encoding: utf8
+  database: teste
+  pool: 5
+  username: root
+  password:
+  reconnect: true
+
+test:
+  adapter: mysql
+  host: 192.168.0.112
+  encoding: utf8
+  database: teste
+  pool: 5
+  username: root
+  password:
+  reconnect: true
+
+
+production:
+  adapter: mysql
+  host: 192.168.0.112
+  encoding: utf8
+  database: teste
+  pool: 5
+  username: root
+  password:
+  reconnect: true
+
+

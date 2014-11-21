@@ -1,0 +1,61 @@
+
+<div class="paginacao">
+  <%if @page.to_i > 1 %>
+   <a href="/first/index?page=1"><%= image_tag("first.png",:style=>"width: 20px; heigth:16px; border:0", :title =>"Primeira Página")%></a>
+   <a href="/first/index?page=<%= (@page.to_i - 1) %>"><%= image_tag("before.png",:style=>"width: 15px; heigth:16px; border:0", :title =>"Página Anterior")%></a>
+  <% else %>
+   <%= image_tag("first_des.png",:style=>"width: 20px; heigth:16px; border:0", :title =>"Primeira Página")%>
+   <%= image_tag("before_des.png",:style=>"width: 15px; heigth:16px; border:0", :title =>"Página Anterior")%>
+  <% end %>
+     <%=@page%> de <%=@pages%> páginas
+  <%if @page.to_i < 50 %>
+   <a href="/first/index?page=<%= (@page.to_i + 1) %>"><%= image_tag("next.png"  ,:style=>"width: 15px; heigth:16px; border:0", :title =>"Próxima Página") %></a>
+   <a href="/first/index?page=<%= (@pages.to_i) %>"><%= image_tag("last.png"  ,:style=>"width: 20px; heigth:16px; border:0", :title =>"Última Página") %></a>
+  <% else %>
+     <%= image_tag("next_des.png"  ,:style=>"width: 15px; heigth:16px; border:0", :title =>"Próxima Página") %>
+     <%= image_tag("last_des.png"  ,:style=>"width: 20px; heigth:16px; border:0", :title =>"Última Página") %>
+  <% end %>
+</div>
+
+<div id="conteudo">
+
+  <% @obj.each do |shot| %>
+      <div id="linha" class="linha clearfix">
+        <a href="/first/show/<%= shot['id'] %>">
+        <span class="image">
+          <span></span>
+           <%= image_tag("#{shot['image_url']}",:title => "#{shot['title']}", :id => "tumb") %>
+        </span>
+        <div class="texto">
+          <h3><%= shot['title']%></h3>
+          <%= render :inline => "#{shot['description']}"%>
+        </div>
+        </a>
+      </div>
+  <% end %>
+
+</div>
+
+<div class="contador">
+  <b><%=@obj_length%></b> linhas do total de <b><%=@total%></b>.
+</div>
+
+<div class="traco"></div>
+
+<div class="paginacao">
+  <%if @page.to_i > 1 %>
+   <a href="/first/index?page=1"><%= image_tag("first.png",:style=>"width: 20px; heigth:16px; border:0", :title =>"Primeira Página")%></a>
+   <a href="/first/index?page=<%= (@page.to_i - 1) %>"><%= image_tag("before.png",:style=>"width: 15px; heigth:16px; border:0", :title =>"Página Anterior")%></a>
+  <% else %>
+   <%= image_tag("first_des.png",:style=>"width: 20px; heigth:16px; border:0", :title =>"Primeira Página")%>
+   <%= image_tag("before_des.png",:style=>"width: 15px; heigth:16px; border:0", :title =>"Página Anterior")%>
+  <% end %>
+     <%=@page%> de <%=@pages%> páginas
+  <%if @page.to_i < 50 %>
+   <a href="/first/index?page=<%= (@page.to_i + 1) %>"><%= image_tag("next.png"  ,:style=>"width: 15px; heigth:16px; border:0", :title =>"Próxima Página") %></a>
+   <a href="/first/index?page=<%= (@pages.to_i) %>"><%= image_tag("last.png"  ,:style=>"width: 20px; heigth:16px; border:0", :title =>"Última Página") %></a>
+  <% else %>
+     <%= image_tag("next_des.png"  ,:style=>"width: 15px; heigth:16px; border:0", :title =>"Próxima Página") %>
+     <%= image_tag("last_des.png"  ,:style=>"width: 20px; heigth:16px; border:0", :title =>"Última Página") %>
+  <% end %>
+</div>

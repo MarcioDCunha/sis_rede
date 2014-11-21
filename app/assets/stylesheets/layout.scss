@@ -1,0 +1,146 @@
+/* max-width */
+@media screen and (max-device-width: 360px) {
+   
+
+#tit_page {
+    font-size:16px;
+    padding:10px 0 10px 10px;
+    margin-top:10px;
+    /*color:#00FF00;*/
+}
+
+#conteudo {
+    font-size:12px;
+    margin-top:5px;
+    margin-bottom:10px;
+    padding:5px 5px 2px 5px;
+}
+
+#rodape {
+    height: 30px;
+    font-size:12px;
+    vertical-align: middle;
+    text-align:center;
+    padding:15px 0 0px 0px;
+    margin-top:20px;
+    margin-bottom:10px;
+    color:#7F96B1;
+}
+
+#tit_page, #conteudo, #rodape {
+    margin-left:0px;
+    width:330px;
+    background-color:#f2f2f2 ;
+}
+
+.clearfix {
+    overflow:auto;
+    zoom:1;
+}
+
+.linha {
+    background-color:#FFFFFF;
+    padding:5px 5px 5px 5px;
+    margin-bottom:10px;
+    border-style:solid;
+    border-width:2px;
+    border-color:#cecece;
+    box-shadow:0px 0px 10px #cecece;
+}
+
+#tumb {
+    margin-right:5px;
+    margin-bottom:5px;
+    width: 315px;
+}
+
+a.tumb {
+    border-style:solid;
+    border-width:2px;
+    border-color:#cecece;
+}
+
+.image {
+    vertical-align:top;
+    width:300px;
+}
+
+.h3 {
+    font-size:12px;
+    font-weight:bold;
+}
+
+.texto {
+    display:none;
+    font-weight:normal;
+    float:right;
+    text-align:left;
+    width:100px;
+    color:#000000;
+}
+
+.texto_int {
+    font-weight:normal;
+    float:right;
+    text-align:left;
+    width:300px;
+    color:#666666;
+}
+
+
+.autor {
+    float:right;
+    text-align:left;
+    margin-top:5px;
+    padding-left:0px;
+    vertical-align:middle;
+    width:300px;
+    text-size:14px;
+    color:#6F6F6F;
+}
+
+.autor img {
+    vertical-align:middle;
+    border-radius:50px;
+    width:20em;
+    margin-right:5px;
+}
+
+.contador {
+    margin-left:0px;
+    margin-right:0px;
+    margin-bottom:20px;
+    width:340px;
+    text-align:right;
+    font-size:13px;
+    color:#999999;
+}
+
+.traco {
+    width:340px;
+    background-color:#7F96B1;
+    display:block;
+    height:2px;
+    margin:0px 0px 0px 0px
+}
+
+.linha_divisoria {
+    border-top:1px solid #CCCCCC;
+    font-size:1px;
+    color:white;
+    margin-bottom:10px;
+}
+
+.paginacao,.direcionais {
+    margin-left:0px;
+    width:340px;
+    margin-top:5px;
+    vertical-align:bottom;
+    padding-top:5px;
+    color:#3366CC;
+    font-weight:bold;
+}
+
+
+
+}
